@@ -1,5 +1,9 @@
-# Как настроить оповещения из Trello в Slack [#slack]()
+[slack](https://github.com/search?q=user%3Abaikulov+repo%3Abaikulov%2Finstructions+%23slack+in%3Afile&type=code)
+[#slack](https://github.com/search?q=user%3Abaikulov+repo%3Abaikulov%2Finstructions+%23slack+in%3Afile&type=code)
+tags:
+[slack](https://github.com/search?q=user%3Abaikulov+repo%3Abaikulov%2Finstructions+%23slack+in%3Afile&type=code)
 
+# Как настроить оповещения из Trello в Slack 
 Для того, чтобы настроить автоматические оповещения необходимо:
 - Создать отдельный канал в Slack
 - Подключить Butler к рабочей области с этим каналом

@@ -39,3 +39,6 @@ gcloud compute instances delete <vm_name>
 ```
 gcloud compute ssh --project "<my_project>" --zone "<zone>" "instance_name"
 ```
+
+### Полезные ссылки
+[Справка по gcloud compute instances create](https://cloud.google.com/sdk/gcloud/reference/compute/instances/create)

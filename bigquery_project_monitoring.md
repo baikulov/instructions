@@ -2,7 +2,7 @@ tags:
 [gcloud](https://github.com/search?q=user%3Abaikulov+repo%3Abaikulov%2Finstructions+tags%3A+gcloud+in%3Afile&type=code),
 [bigquery](https://github.com/search?q=user%3Abaikulov+repo%3Abaikulov%2Finstructions+tags%3A+bigquery+in%3Afile&type=code)
 
-![alt text](https://github.com/baikulov/instructions/blob/master/test_image.png)
+![alt text](https://github.com/baikulov/instructions/blob/master/images/test_image.png)
 
 # Мониторинг проекта в BigQiery
 

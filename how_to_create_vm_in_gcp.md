@@ -24,7 +24,7 @@ gcloud compute machine-types list --zones=us-central1-a -список досту
 
 **Виртуальную машину можно создать с помощью команды:**
 ```
-gcloud compute instances create vm1  --image-family=ubuntu-1604-lts --image-project=ubuntu-os-cloud --machine-type=f1-micro --zone=us-central1-a --boot-disk-size=20Gb --tags=docker
+gcloud compute instances create vm1  --image-family=ubuntu-1604-lts --image-project=ubuntu-os-cloud --machine-type=e2-medium --zone=us-central1-a --boot-disk-size=20Gb --tags=docker
 ```
 
 **Чтобы остановить, запустить или удалить виртуальную машину нужны команды**
@@ -37,6 +37,7 @@ gcloud compute instances delete <vm_name>
 
 **Чтобы подключиться к виртуальной машине по SSH**
 ```
+gcloud compute config-ssh (получить пример ssh запроса)
 gcloud compute ssh --project "<my_project>" --zone "<zone>" "instance_name" (из WSL)
 ssh r-server.us-central1-a.spry-compound-139714 (подключение SSH с доступом к папке)
 sudo chown -R 79370 /home/79370/ (для сохранения изменений в папке)

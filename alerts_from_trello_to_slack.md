@@ -1,7 +1,7 @@
 tags:
 [slack](https://github.com/search?q=user%3Abaikulov+repo%3Abaikulov%2Finstructions+tags%3A+slack+in%3Afile&type=code),
 [trello](https://github.com/search?q=user%3Abaikulov+repo%3Abaikulov%2Finstructions+tags%3A+trello+in%3Afile&type=code),
-[alerts](https://github.com/search?q=user%3Abaikulov+repo%3Abaikulov%2Finstructions+tags%3A+alerts+in%3Afile&type=code)
+[monitoring](https://github.com/search?q=user%3Abaikulov+repo%3Abaikulov%2Finstructions+tags%3A+monitoring+in%3Afile&type=code)
 
 # Как настроить оповещения из Trello в Slack 
 Для того, чтобы настроить автоматические оповещения необходимо:

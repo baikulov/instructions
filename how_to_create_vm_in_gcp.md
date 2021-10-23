@@ -37,7 +37,15 @@ gcloud compute instances delete <vm_name>
 
 **Чтобы подключиться к виртуальной машине по SSH**
 ```
-gcloud compute ssh --project "<my_project>" --zone "<zone>" "instance_name"
+gcloud compute ssh --project "<my_project>" --zone "<zone>" "instance_name" (из WSL)
+ssh r-server.us-central1-a.spry-compound-139714 (подключение SSH с доступом к папке)
+sudo chown -R 79370 /home/79370/ (для сохранения изменений в папке)
+```
+
+
+**Чтобы создать инстанс с базой данных в Cloud SQL**
+```
+gcloud sql instances create mysql --database-version=MYSQL_5_7 --cpu=2 --memory=4GB --region=us-central1 --root-password=password1
 ```
 
 ### Полезные ссылки

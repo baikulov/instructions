@@ -1,15 +1,56 @@
+# добавляем не больше 3 тегов
 tags:
 [gcloud](https://github.com/search?q=user%3Abaikulov+repo%3Abaikulov%2Finstructions+tags%3A+gcloud+in%3Afile&type=code),
 [bigquery](https://github.com/search?q=user%3Abaikulov+repo%3Abaikulov%2Finstructions+tags%3A+bigquery+in%3Afile&type=code)
 
+# добавляем картинку
 ![alt text](https://github.com/baikulov/instructions/blob/master/images/test_image.png)
 
 # Мониторинг проекта в BigQiery
 
-Для управления проектом в BigQuery необходимо настроить мониторинг по:
-- контролю за исполнением запросов от рядовых пользователей
-- контролю за размером проекта, количеством датасетов и таблиц
-- контролю за размерами таблиц, актуальностью данных в них
+Для управления проектом в BigQuery необходимо настроить мониторинг по нескольким направлениям:
+- контроль за исполнением запросов от пользователей и сервисных аккаунтов
+- контроль за размером проекта, количеством датасетов и таблиц
+- контролю за размерами таблиц, актуальностью данных в них # будет позже
+
+
+## Контроль за исполнением запросов пользователей
+
+Данный мониторинг поможет ответить на вопросы:
+- какие sql-запросы пишут пользователи
+- сколько стоит каждый запрос
+- какие таблицы или запросы стоит оптимизировать
+- кто является лидером по расходам
+
+## Настройка экспорта логов в таблицу BigQuery
+
+Находим в Navigation Menu раздел Logging и переходим в подраздел Logs Router.
+Подробнее о настройк логов тут - https://cloud.google.com/logging/docs/export/configure_export_v2
+
+# скрин по теме
+![alt text](https://github.com/baikulov/instructions/blob/master/images/start_logging_bq.jpg)
+
+Выбираем Create Sink и в пунтке Sink details указываем название и описание.
+# скрин по теме
+![alt text](https://github.com/baikulov/instructions/blob/master/images/test_image.png)
+
+
+Вторым шагом выбираем место назначения в Sink destination, это место куда будут складываться логи. Выбираем свой проект и датасет, в котором будет храниться таблица.
+# скрин по теме
+![alt text](https://github.com/baikulov/instructions/blob/master/images/test_image.png)
+
+
+На этапе Choose logs to include in sink указываем фильтры, позволяющие получать тольтко данные по выполненным запросам в BigQuery
+
+```
+resource.type="bigquery_resource"
+protoPayload.methodName="jobservice.jobcompleted"
+```
+# скрин по теме
+![alt text](https://github.com/baikulov/instructions/blob/master/images/test_image.png)
+
+
+После этого сохраняем наш Sink. Теперь данные будут собираться в таблицу.
 
 ### Контроль за размером таблиц и актуальностью данных в них
 

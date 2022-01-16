@@ -11,7 +11,7 @@ tags:
 Для управления проектом в BigQuery необходимо настроить мониторинг по нескольким направлениям:
 - контроль за исполнением запросов от пользователей и сервисных аккаунтов
 - контроль за размером проекта, количеством датасетов и таблиц
-- контролю за размерами таблиц, актуальностью данных в них # будет позже
+- контролю за размерами таблиц, актуальностью данных в них
 
 
 ## Контроль за исполнением запросов пользователей
@@ -25,10 +25,10 @@ tags:
 ## Настройка экспорта логов в таблицу BigQuery
 
 Находим в **Navigation Menu** раздел **Logging** и переходим в подраздел **Logs Router**.
-Подробнее о настройк логов тут - https://cloud.google.com/logging/docs/export/configure_export_v2
-
 <!-- картинка -->
 ![alt text](https://github.com/baikulov/instructions/blob/master/images/start_logging_bq.jpg)
+Подробнее о настройк логов тут - https://cloud.google.com/logging/docs/export/configure_export_v2
+
 
 
 Выбираем **CREATE SINK** и в пункте **Sink details** указываем название и описание нашего сборщика логов.
@@ -40,6 +40,8 @@ tags:
 <!-- картинка -->
 ![alt text](https://github.com/baikulov/instructions/blob/master/images/sink_destionation.jpg)
 
+Обычно я создаю отдельынй датасет и называю его **Logging**
+
 
 На этапе **Choose logs to include in sink** мы указываем фильтры, позволяющие получать данные только по выполненным запросам в BigQuery
 
@@ -49,6 +51,9 @@ protoPayload.methodName="jobservice.jobcompleted"
 ```
 <!-- картинка -->
 ![alt text](https://github.com/baikulov/instructions/blob/master/images/choose_logs.jpg)
+
+Фильтры помогают получать только те данные из логов, что необходимы.
+
 
 После этого сохраняем наш Sink. Теперь в указанном вами датасете появится таблица **cloudaudit_googleapis_com_data_access** с нужными данными.
 
@@ -79,6 +84,7 @@ ORDER BY timestamp Desc
 
 Теперь эту таблицу можно подключить к визуализации.
 
+<!--
 ### Контроль за размером таблиц и актуальностью данных в них
 
 Для создания постоянной таблицы с метаданными по проекту необходимо выполнить следующий запрос:
@@ -128,3 +134,4 @@ FROM
  `<your_project>`.<dataset>.INFORMATION_SCHEMA.TABLES
 ```
 Он вернёт DDL-таблиц в датасете, который потом можно импортировать в любой ERD-диаграммер(с предварительной обработкой из-за разницы в схемах данных)
+-->

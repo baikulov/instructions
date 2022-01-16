@@ -13,7 +13,7 @@ tags:
 Первым шагом открываем **Navigation Menu** и переходим в раздел **Iam & Admin** где выбираем подраздел **Service Accounts**.
 
 <!-- добавляем картинку -->
-![alt text](https://github.com/baikulov/instructions/blob/master/images/service_account.png)
+![alt text](https://github.com/baikulov/instructions/blob/master/images/service_account.jpg)
 
 Жмём **CREATE SERVICE ACCOUNT** и попадаем в интерфейс создания аккаунтов
 
@@ -22,10 +22,12 @@ tags:
 Следующим шагом выбираем необходимые роли и права для аккаунта. Например, для BigQuery.
 
 <!-- добавляем картинку -->
-![alt text](https://github.com/baikulov/instructions/blob/master/images/service_account_create.png)
+![alt text](https://github.com/baikulov/instructions/blob/master/images/service_account_create.jpg)
 
 
 Жмём **DONE** и переходим в общий интерфейс сервисных аккаунтов.
 
 Теперь нам нужно скачать json-файл с credentials. Для этого переходим внутрь созданного аккаунта и выбираем вкладку **KEYS**. Жмём **ADD KEY** и выбираем **Create new key**, оставляем опцию  **JSON** по умолчанию и сохраняем файл к себе на компьютер.
+<!-- добавляем картинку -->
+![alt text](https://github.com/baikulov/instructions/blob/master/images/service_account_json.jpg)
  

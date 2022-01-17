@@ -132,16 +132,21 @@ EXECUTE IMMEDIATE CONCAT("INSERT INTO `<название проекта>.<наз
 
 Данную таблицу можно подключить к визуализации
 
-<!--
-### ERD-диаграмма слоя витрин
 
-Для построения такой диаграммы быстро и без особых затрат надо воспользоваться кодом
+### Контроль за стоимостью проекта
 
-```
-SELECT
- table_name, ddl
-FROM
- `<your_project>`.<dataset>.INFORMATION_SCHEMA.TABLES
-```
-Он вернёт DDL-таблиц в датасете, который потом можно импортировать в любой ERD-диаграммер(с предварительной обработкой из-за разницы в схемах данных)
--->
+Для точного контроля стоимости проекта необходимо настроить экспорт данных из биллинга в таблицу BigQuery.
+
+Открываем **NAVIGATION MENU** и находим раздел **Billing** в котором кликаем на подраздел **billing export**.
+
+<!-- картинка -->
+![alt text](https://github.com/baikulov/instructions/blob/master/images/billing_export_menu.jpg)
+
+Детальная инструкция от Google - https://cloud.google.com/billing/docs/how-to/export-data-bigquery
+
+Оказавшись на странице заходим в **Edit settings** каждого раздела и указываем датасет, в котором должны появиться таблицы с расходами по проекту.
+
+<!-- картинка -->
+![alt text](https://github.com/baikulov/instructions/blob/master/images/export_billing_page.jpg)
+
+Спустя некоторое время в датасете появятся таблицы
